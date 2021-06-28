@@ -17,9 +17,9 @@ function sendBackEnd() {
 	var xhr = new XMLHttpRequest();
 	var i = document.getElementById("in1").value;
     // This block will run when we on docker page.
-    if (window.location == "http://192.168.253.63/web-task/web.html#docker") {
+    if (window.location == "http://<ip_address>/web-task/web.html#docker") {
         if(i.includes("docker")== true) {
-            xhr.open("GET", "http://192.168.253.63/cgi-bin/web-task/backend.py?x=" + i, true);
+            xhr.open("GET", "http:///<ip_address>/cgi-bin/web-task/backend.py?x=" + i, true);
 	        xhr.send();
 	        xhr.onload = function() {
 		    //output getting/coming from url
